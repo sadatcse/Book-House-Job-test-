@@ -1,0 +1,128 @@
+[
+    {
+      "bookId": "978-1982127794",
+      "bookName": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "image": "https://i.ibb.co/PZm68vC/the-silent-patient.jpg",
+      "review": {
+        "person": "John Doe",
+        "comments": "A gripping psychological thriller that keeps you guessing until the very end."
+      },
+      "totalPages": 336,
+      "rating": 4.5,
+      "category": "Mystery",
+      "tags": ["Suspense", "Psychological"],
+      "publisher": "Celadon Books",
+      "yearOfPublishing": 2019,
+      "bookColor": "#3366CC",
+      "readingTime": 7
+    },
+    {
+      "bookId": "978-0062315007",
+      "bookName": "Gone Girl",
+      "author": "Gillian Flynn",
+      "image": "https://i.ibb.co/VSX4dc6/gone-girl.jpg",
+      "review": {
+        "person": "Jane Smith",
+        "comments": "An intense and unpredictable story, highly recommended!"
+      },
+      "totalPages": 432,
+      "rating": 4.7,
+      "category": "Thriller",
+      "tags": ["Mystery", "Drama"],
+      "publisher": "Crown Publishing Group",
+      "yearOfPublishing": 2012,
+      "bookColor": "#FF9900",
+      "readingTime": 8
+    },
+    {
+      "bookId": "978-0062224793",
+      "bookName": "The Girl on the Train",
+      "author": "Paula Hawkins",
+      "image": "https://i.ibb.co/4FkmgTL/Thegirlonthetrain.jpg",
+      "review": {
+        "person": "Emily Johnson",
+        "comments": "A gripping read with well-developed characters and plenty of twists."
+      },
+      "totalPages": 336,
+      "rating": 4.3,
+      "category": "Suspense",
+      "tags": ["Psychological", "Mystery"],
+      "publisher": "Riverhead Books",
+      "yearOfPublishing": 2015,
+      "bookColor": "#FF3366",
+      "readingTime": 7
+    },
+    {
+      "bookId": "978-0345803504",
+      "bookName": "The Goldfinch",
+      "author": "Donna Tartt",
+      "image": "https://i.ibb.co/ZVV8VRs/The-Gold.png",
+      "review": {
+        "person": "Michael Brown",
+        "comments": "A beautifully written novel with rich characters and intricate storytelling."
+      },
+      "totalPages": 771,
+      "rating": 4.6,
+      "category": "Literary Fiction",
+      "tags": ["Art", "Friendship"],
+      "publisher": "Little, Brown and Company",
+      "yearOfPublishing": 2013,
+      "bookColor": "#663399",
+      "readingTime": 15
+    },
+    {
+      "bookId": "978-0143127550",
+      "bookName": "The Night Circus",
+      "author": "Erin Morgenstern",
+      "image": "https://i.ibb.co/x8NYJZP/The-night.jpg",
+      "review": {
+        "person": "Sarah Johnson",
+        "comments": "A mesmerizing and enchanting tale that transports you to a magical world."
+      },
+      "totalPages": 512,
+      "rating": 4.4,
+      "category": "Fantasy",
+      "tags": ["Magic", "Romance"],
+      "publisher": "Anchor Books",
+      "yearOfPublishing": 2012,
+      "bookColor": "#009933",
+      "readingTime": 10
+    },
+    {
+      "bookId": "978-0525953486",
+      "bookName": "The Martian",
+      "author": "Andy Weir",
+      "image": "https://i.ibb.co/7SBGY86/Themartian.jpg",
+      "review": {
+        "person": "David Wilson",
+        "comments": "An incredibly realistic and thrilling adventure on Mars."
+      },
+      "totalPages": 369,
+      "rating": 4.8,
+      "category": "Science Fiction",
+      "tags": ["Space", "Survival"],
+      "publisher": "Crown Publishing Group",
+      "yearOfPublishing": 2014,
+      "bookColor": "#9966CC",
+      "readingTime": 8
+    },
+    {
+        "bookId": "978-0062387240",
+        "bookName": "Where the Crawdads Sing",
+        "author": "Delia Owens",
+        "image": "https://i.ibb.co/Gcbf1dx/WhereThe.jpg",
+        "review": {
+          "person": "Emma White",
+          "comments": "A beautifully written novel with stunning descriptions of nature."
+        },
+        "totalPages": 384,
+        "rating": 4.8,
+        "category": "Literary Fiction",
+        "tags": ["Nature", "Coming of Age"],
+        "publisher": "G.P. Putnam's Sons",
+        "yearOfPublishing": 2018,
+        "bookColor": "#FF6666",
+        "readingTime": "6 hours"
+      }
+  ]
