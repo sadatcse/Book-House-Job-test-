@@ -8,8 +8,26 @@ const DetailsBook = () => {
     const foundBook = Data.find(book => book.bookId === id);
     const [isBookRead, setIsBookRead] = useState(false);
 
-    const handleReadButtonClick = () => {
+    const handleReadButtonClick = (book) => {
+        const { bookId } = book;
+        const status = 'read';
+        const newdata = { ...book, status }; // Including the entire book data along with status
         setIsBookRead(true);
+    
+        const existingData = JSON.parse(localStorage.getItem('bookData')) || {};
+    
+        if (existingData[bookId]) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Already Marked as Read!',
+                text: 'This book is already marked as read.',
+            });
+            return; 
+        }
+    
+        const updatedData = { ...existingData, [bookId]: newdata };
+        localStorage.setItem('bookData', JSON.stringify(updatedData));
+        
         Swal.fire({
             icon: 'success',
             title: 'Read Completed!',
@@ -17,14 +35,31 @@ const DetailsBook = () => {
         });
     };
 
-    const handleWishlistButtonClick = () => {
+    const handleWishlistButtonClick = (book) => {
+        const status = 'list';
+        const newdata = { ...book, status }; // Including the entire book data along with status
+        
+        const existingData = JSON.parse(localStorage.getItem('wishlistData')) || {};
+        
+        if (existingData[book.bookId]) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Already in Wishlist!',
+                text: 'This book is already in your Wishlist.',
+            });
+            return; 
+        }
+    
+        const updatedData = { ...existingData, [book.bookId]: newdata };
+        localStorage.setItem('wishlistData', JSON.stringify(updatedData));
+        
         Swal.fire({
             icon: 'success',
             title: 'Added to Wishlist!',
             text: 'This book has been added to your Wishlist.',
         });
     };
-
+    
     const wishlistButtonStyle = {
         backgroundColor: foundBook ? foundBook.bookColor : '#3366CC',
     };
@@ -53,12 +88,12 @@ const DetailsBook = () => {
                         <p className="text-gray-700">Year of Publishing: {foundBook.yearOfPublishing}</p>
                         <p className="text-gray-700">Rating: {foundBook.rating}</p>
                         <div className="flex mt-4">
-                            <button onClick={handleReadButtonClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">
-                                Read
-                            </button>
-                            <button onClick={handleWishlistButtonClick} disabled={isBookRead} style={wishlistButtonStyle} className={`text-white font-bold py-2 px-4 rounded ${isBookRead && 'opacity-50 cursor-not-allowed'}`}>
-                                Wishlist
-                            </button>
+                        <button onClick={() => handleReadButtonClick(foundBook)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4">
+    Read
+</button>
+<button onClick={() => handleWishlistButtonClick(foundBook)} disabled={isBookRead} style={wishlistButtonStyle} className={`text-white font-bold py-2 px-4 rounded ${isBookRead && 'opacity-50 cursor-not-allowed'}`}>
+    Wishlist
+</button>
                         </div>
                     </div>
                 ) : (
